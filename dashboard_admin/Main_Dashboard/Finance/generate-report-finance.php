@@ -131,7 +131,7 @@ $pdf->AliasNbPages();
 $pdf->AddPage();
 $data = $pdf->LoadData($conn);
 $pdf->FancyTable($data);
-$pdf->Output();
+$pdf->Output('D', 'Finance_Statement_Report.pdf');
 ?>
 
 ### Step 3: Add Download Button in Your HTML
