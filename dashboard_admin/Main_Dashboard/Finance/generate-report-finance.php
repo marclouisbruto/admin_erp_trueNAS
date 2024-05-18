@@ -131,26 +131,7 @@ $pdf->AliasNbPages();
 $pdf->AddPage();
 $data = $pdf->LoadData($conn);
 $pdf->FancyTable($data);
-$pdf->Output('D', 'Finance_Statement_Report.pdf');
+$pdf->Output();
 ?>
 
-### Step 3: Add Download Button in Your HTML
 
-In your HTML file, add a button that links to `generate_pdf.php`.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- existing head content -->
-</head>
-<body>
-    <!-- existing body content -->
-
-    <div class="download-button">
-        <button onclick="window.location.href='generate_pdf.php'">Download PDF Report</button>
-    </div>
-
-    <!-- existing script tags -->
-</body>
-</html>

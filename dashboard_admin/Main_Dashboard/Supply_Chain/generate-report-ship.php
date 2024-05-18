@@ -70,5 +70,5 @@ if ($result) {
 }
 
 // Output the PDF
-$pdf->Output('D', 'Shipping_Statement_Report.pdf');
+$pdf->Output();
 ?>
