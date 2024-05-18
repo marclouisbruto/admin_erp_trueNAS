@@ -169,7 +169,11 @@
         </table>
     </div>
     
-   
+    <div class="download-button" style="margin-left: 100px;">
+            <button onclick="window.location.href='generate-report-ship.php'">Download PDF Report</button>
+        </div>
+
+            
     <script src="../boardd.js"></script>
 
 </body>

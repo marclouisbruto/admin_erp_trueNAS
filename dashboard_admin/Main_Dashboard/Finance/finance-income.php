@@ -202,6 +202,9 @@ if (!isset($_SESSION['adminID'])) {
             }
             ?>
         </table>
+        <div class="download-button" style="margin-left: 100px;">
+            <button onclick="window.location.href='generate-report-finance.php'">Download PDF Report</button>
+        </div>
     </div>
 
 
