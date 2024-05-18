@@ -1,0 +1,827 @@
+:root {
+    --color1: #ECF4D6;
+    --color2: #9AD0C2;
+    --color3: #2D9596;
+    --color4: #265073;
+    --color5: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: ghostwhite;
+}
+
+/* SIDEBAR */
+
+/* Positions the leftbar to the left side of the viewport */
+#leftbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: var(--color1);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#leftbar img {
+    margin: 0px 5px 0px 0px;
+    width: 30px;
+}
+
+/* make scrollbar invicible */
+#leftbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* design for the logo */
+#leftbar .logo {
+    background-color: var(--color4);
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--color1);
+    box-shadow: 0px 5px 3px #696969;
+}
+
+
+/* adds margin for the side-menu to go down */
+
+#leftbar .icon {
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* icon up and down */
+#leftbar .side-menu .each .down {
+    margin-left: auto;
+    display: flex;
+}
+
+#leftbar .side-menu .each .up {
+    margin-left: auto;
+    display: none;
+}
+
+#leftbar .side-menu .each .down.downn {
+    margin-left: auto;
+    display: none;
+}
+
+#leftbar .side-menu .each .up.upp {
+    margin-left: auto;
+    display: flex;
+}
+
+/* icon up and down */
+
+#leftbar .side-menu {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#leftbar .side-menu a {
+    display: flex;
+    margin: 10px 0;
+    padding: 10px 10px;
+    align-items: center;
+    transition: all .3s ease;
+    border-radius: 10px;
+
+}
+
+#leftbar .side-menu>li>a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#leftbar .dropdown>li>a {
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+
+#leftbar .side-menu>li>a:hover {
+    background-color: var(--color2);
+}
+
+#leftbar .side-menu .current {
+    background-color: var(--color3);
+
+}
+
+#leftbar .dropdown {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all .10s ease;
+}
+
+#leftbar .dropdown.print {
+
+    max-height: 200px;
+}
+
+#leftbar .dropdown a:hover {
+    color: var(--color4);
+}
+
+/* main */
+
+.rightCont {
+    background-color: rgb(244, 244, 244);
+    margin-left: 220px;
+}
+
+.rightCont .summary {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+
+
+.order,
+.shipping,
+.inventory,
+.finance {
+    background-color: var(--color4);
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 200px;
+    box-shadow: 2px 2px 2px 0px black;
+    cursor: pointer;
+}
+
+.order:hover,
+.shipping:hover,
+.inventory:hover,
+.finance:hover {
+    background-color: var(--color3);
+    font-size: 1.2em;
+    transition: background-color 0.5s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Inventory Live Display */
+#title-live {
+    padding-top: 20px;
+    margin-left: 250px;
+    /* border: 1px solid black; */
+    display: inline-block;
+}
+
+#title-overview {
+    padding-top: 20px;
+    margin-left: 30px;
+    /* border: 1px solid black; */
+    display: inline-block;
+}
+
+.inventory-content {
+    position: relative;
+    width: 1060px;
+    margin: 20px 0 40px;
+    margin-left: 230px;
+    border: 1px solid var(--color3);
+
+}
+
+.inventory-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--color3);
+    border-radius: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.inventory-content td {
+    font-size: 18px;
+
+}
+
+.inventory-content th,
+.inventory-content td {
+    padding: 14px;
+    text-align: center;
+}
+
+.inventory-content th {
+    background-color: var(--color3);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 7px 20px;
+    border: 1px solid var(--color2);
+}
+
+.inventory-content tr:nth-child(even) {
+    background-color: var(--color2);
+}
+
+
+.inventory-content img {
+    max-width: 120px;
+    max-height: 12 0px;
+
+}
+
+.inventory-content button {
+    background-color: var(--color5);
+    color: var(--color1);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inventory-content button:hover {
+    background-color: rgb(235, 36, 36);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#desc {
+    text-align: justify;
+}
+
+#add-product-button button {
+    background-color: var(--color3);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#add-product-button button:hover {
+    background-color: var(--color4);
+}
+
+#add-product-button {
+    display: inline-block;
+    margin-left: 684px;
+}
+
+/* Popup add new product */
+/* Popup styles */
+#addProductPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    font-size: 12px;
+}
+
+button {
+    background-color: var(--color3);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color4);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Center the overlay content */
+.overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Add transition for a smooth appearance */
+#addProductPopup,
+.overlay {
+    transition: all 0.3s ease;
+}
+
+/* Show/hide animation */
+#addProductPopup.show,
+.overlay.show {
+    display: block;
+}
+
+#inventory-soldout button:hover {
+    background-color: var(--color3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: white;
+}
+
+
+
+/* Inventory Sold Out */
+#updateProductpopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    font-size: 12px;
+}
+
+button {
+    background-color: var(--color3);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color4);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+    z-index: 999;
+}
+
+/* Center the overlay content */
+.overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Add transition for a smooth appearance */
+#updateProductpopup,
+.overlay {
+    transition: all 0.3s ease;
+}
+
+/* Show/hide animation */
+#updateProductpopup.show,
+.overlay.show {
+    display: block;
+}
+
+
+/* Finance Income Statement */
+.income-wrapper {
+    /* border: 1px solid black; */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 420px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 5px 8px 18px #888888;
+    background-color: var(--color1);
+    position: relative;
+}
+
+#total-expense,
+#total-sales,
+#net-income {
+    font-size: 20px;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+#value-expense,
+#value-sales {
+    display: inline-block;
+    margin-left: 100px;
+    font-weight: bold;
+    width: 200px;
+    /* border: 1px solid black; */
+    text-align: end;
+}
+
+#value-sales {
+    margin-left: 127px;
+}
+
+#value-income {
+    display: inline;
+    margin-left: 50px;
+    font-size: 27px;
+
+}
+
+#minus {
+    position: absolute;
+    margin-left: 100px;
+    border: 1px solid black;
+    width: 12px;
+    left: 120px;
+    top: 12px;
+}
+
+#net-income {
+    border: 2px solid black;
+    width: 90%;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#total {
+    position: absolute;
+    width: 200px;
+    border: 1px solid black;
+    bottom: 135px;
+    right: 165px;
+}
+
+
+/* Finance Income Table */
+.financetable table {
+    width: 70%;
+    border-collapse: collapse;
+    border: 1px solid var(--color3);
+    border-radius: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 30px 20px 30px 250px;
+}
+
+.financetable td {
+    font-size: 18px;
+
+}
+
+.financetable th,
+.financetable td {
+    padding: 14px;
+    text-align: center;
+}
+
+.financetable th {
+    background-color: var(--color3);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 7px 20px;
+    border: 1px solid var(--color2);
+}
+
+.financetable tr:nth-child(even) {
+    background-color: var(--color2);
+}
+
+/* Logout */
+.logout button {
+    width: 180px;
+    margin-left: 20px;
+    margin-top: 200px;
+    font-weight: bold;
+    position: fixed;
+}
+
+/* Admin Details */
+.admin-details {
+    margin-top: 150px;
+    position: fixed;
+    left: 5px;
+}
+
+#admin {
+    position: fixed;
+    z-index: 1;
+    top: 350px;
+}
+
+#admin-name {
+    width: 180px;  
+    margin-left: 15px;
+    padding: 10px 0px;
+    border-radius: 12px;
+    background-color: var(--color2);
+    font-weight: bold;
+    padding-left: 35px;
+}
+
+#online {
+    border: 1px solid black;
+    background-color: rgb(0, 157, 0);
+    width: 12px;
+    position: absolute;
+    top: 14px;
+    left: 30px;
+    height: 12px;
+    border-radius: 20px;
+}
+
+/* Pending Order Table */
+.order-content table {
+    width: 70%;
+    border-collapse: collapse;
+    border: 1px solid var(--color3);
+    border-radius: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 30px 20px 30px 250px;
+}
+
+.order-content td {
+    font-size: 18px;
+
+}
+
+.order-content th,
+.order-content td {
+    padding: 14px;
+    text-align: center;
+}
+
+.order-content th {
+    background-color: var(--color3);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 7px 20px;
+    border: 1px solid var(--color2);
+}
+
+.order-content td {
+    border: 1px solid var(--color2);
+}
+
+#order-details {
+    background-color: var(--color2);
+    position: relative;
+}
+
+.order-content input {
+    background-color: var(--color3);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 10px;
+    width: 100px;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+
+/* .order-content tr:nth-child(even) {
+    background-color: var(--color2);
+} */
+
+.title {
+    position: relative;
+}
+
+.title h2 {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    color: var(--color1);
+}
+
+.title h1 {
+    /* border: 1px solid black; */
+    text-align: center;
+    height: 100px;
+    margin-top: 90px;
+    color: var(--color1);
+    font-size: 2.5rem;
+}
+
+#input-generate {
+    background-color: var(--color3);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 10px;
+    width: 140px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+#input-generate:hover {
+    background-color: var(--color4);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Order Receipt Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrapper {
+    border: 1px solid black;
+    width: 35%;
+    margin: 10px auto;
+    background-color: ghostwhite;
+    height: 600px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 140px;
+    height: 70px;
+    /* border: 1px solid black; */
+    margin: 8px auto 0;
+
+}
+
+.title {
+    margin-right: 20px;
+}
+
+.title h3 {
+    text-align: left;
+    /* border: 1px solid black; */
+}
+
+.orderID {
+    /* border: 1px solid black; */
+    padding-right: 30px;
+    text-align: end;
+    margin-top: 10px;
+}
+
+.contact {
+    /* border: 1px solid black; */
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.table-receipt h4 {
+    width: 100%;
+    text-align: center;
+}
+
+.date {
+    display: inline-block;
+    width: 308px;
+    text-align: end;
+    /* border: 1px solid black; */
+}
+
+.table-receipt table {
+    border-collapse: collapse;
+    width: 420px;
+    margin: auto;
+    text-align: center;
+}
+
+#amount-total {
+    text-align: end;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

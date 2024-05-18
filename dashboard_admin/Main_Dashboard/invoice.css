@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.wrapper{
+    border: 1px solid black;
+    width: 35%;
+    margin: 10px auto;
+    background-color: ghostwhite;
+    height: 600px;
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img{
+    width: 140px;
+    height: 70px;
+    /* border: 1px solid black; */
+    margin: 8px auto 0;
+    
+}
+.title{
+    margin-right: 20px;
+}
+.title h3{
+    text-align: left;
+    /* border: 1px solid black; */
+}
+.orderID{
+    /* border: 1px solid black; */
+    padding-right: 30px;
+    text-align: end;
+    margin-top: 10px;
+}
+.contact{
+    /* border: 1px solid black; */
+    padding-left: 30px;
+    margin-top: 10px;
+}
+.table-receipt h4{
+    width: 100%;
+    text-align: center;
+}
+.date{
+    display: inline-block;
+    width: 308px;
+    text-align: end;
+    /* border: 1px solid black; */
+}
+#address-date{
+    margin-right: 30px;
+    display: flex;
+    /* border: 1px solid black; */
+}
+.address{
+    /* border: 1px solid black; */
+    width: 50%;
+}
+.table-receipt table{
+    border-collapse: collapse;
+    width: 420px;
+    margin: auto;
+    text-align: center;
+}
+#amount-total{
+    text-align: end;
+}
+.footer{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.back button{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.print button{
+    position: absolute;
+    left: 80px;
+    top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
