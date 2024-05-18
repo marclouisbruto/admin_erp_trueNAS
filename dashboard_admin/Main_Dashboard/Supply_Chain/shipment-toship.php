@@ -169,9 +169,9 @@
         </table>
     </div>
     
-    <div class="download-button" style="margin-left: 100px;">
+    <div class="download-button" style="margin-left: 250px;">
             <button onclick="window.location.href='generate-report-ship.php'">Download PDF Report</button>
-        </div>
+    </div>
 
             
     <script src="../boardd.js"></script>
